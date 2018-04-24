@@ -35,6 +35,28 @@ LCD::LCD() {
 
 void LCD::clear() { LCDBMEMCTL |= LCDCLRBM | LCDCLRM; }
 
+void LCD::show_digit(unsigned int digit, unsigned int pos, bool upper_line){
+	char *LCD_BASE = ( char *)0x0a00 ;
+	char *addr ;
+	int  offset=0x20 ,  x=1;
+	addr = LCD_BASE + offset + x ;
+	digit = 9;
+	switch (digit) {
+	case 0 : *addr=0b11110101;break;
+	case 1 : *addr=0b01100000;break;
+	case 2 : *addr=0b10110110;break;
+	case 3 : *addr=0b11110010;break;
+	case 4 : *addr=0b01100011;break;
+	case 5 : *addr=0b11010011;break;
+	case 6 : *addr=0b11010111;break;
+	case 7 : *addr=0b01110000;break;
+	case 8 : *addr=0b11110111;break;
+	case 9 : *addr=0b11110011;break;
+	default : *addr=0b11110101;
+	}
+
+}
+
 
 // Hier muesst ihr selbst Code ergaenzen, beispielsweise:
 void LCD::show_number(long int number, bool upper_line) {

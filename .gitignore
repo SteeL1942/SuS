@@ -2,3 +2,7 @@
 src/build/
 
 src/\.dep/
+
+src/wsim\.log
+
+src/repo\.acp
