@@ -37,7 +37,7 @@ public:
    */
   
   // Zeigt eine einzelne Ziffer "digit" an
-  void show_digit(unsigned int digit, unsigned int pos, bool upper_line=false);
+  void show_digit(unsigned int digit, unsigned int pos, bool upper_line=true); //upper_line=false original
   
   // Zeigt ein einzelnes Zeichen "letter" an
   void show_char(const char letter, unsigned int pos, bool upper_line=true);
