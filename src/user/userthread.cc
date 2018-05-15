@@ -15,7 +15,8 @@ void UserThread::action() {
     watchdog_reset();
 
     // Hier muesst ihr selbst Code ergaenzen
-     lcd.show_digit(1, 1); // Beispielsweiser LCD-Zugriff
+     //lcd.show_digit(1, 1); // Beispielsweiser LCD-Zugriff
+     lcd.show_number(98765,false);
   }
   // Achtung: Die action()-Methode darf nicht zurueckkehren,
   //          daher die Endlosschleife!
