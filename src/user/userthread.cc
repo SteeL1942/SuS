@@ -22,12 +22,6 @@ void UserThread::action() {
     // Hier muesst ihr selbst Code ergaenzen
      //lcd.show_digit(1, 4,true); // Beispielsweiser LCD-Zugriff
 
-     lcd.show_string("clic", true);
-     if(buttons.pressed(buttons.STAR)) {
-    	 lcd.show_number(y, false);
-    	 y++;
-     }
-
   }
   // Achtung: Die action()-Methode darf nicht zurueckkehren,
   //          daher die Endlosschleife!

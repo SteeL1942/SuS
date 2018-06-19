@@ -115,7 +115,7 @@ void LCD::show_char(const char letter, unsigned int pos, bool upper_line){
 			case 'f' : *addr=0b00010111;break;
 			case 'g' : *addr=0b11010101;break;
 			case 'h' : *addr=0b01100111;break;
-			case 'i' : *addr=0b00000101;break;
+			case 'i' : *addr=0b00010100;break;
 			case 'j' : *addr=0b11100100;break;
 			case 'k' : *addr=0b01010111;break;
 			case 'l' : *addr=0b10000101;break;

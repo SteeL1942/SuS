@@ -5,7 +5,7 @@
 #include "syscall/guarded_buzzer.h"
 #include "syscall/guarded_semaphore.h"
 
-Guarded_Semaphore counter(0);
+//Guarded_Semaphore counter(0);
 
 class CounterThread: public Thread {
 private:

@@ -18,10 +18,12 @@ Watch watch(10000);
 
 // Hier sollten die Includes der eigenen Thread-Headerfiles ergaenzt werden
 #include "user/userthread.h"
+#include "user/counterthread.h"
 
 /* Threads beim Scheduler anmelden */
 static void ready_threads() {
   organizer.Organizer::ready(userthread);
+  organizer.Organizer::ready(counterthread);
 }
 
 int main() {
