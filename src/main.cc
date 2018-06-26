@@ -15,14 +15,18 @@
 
 Watch watch(10000);
 
-
 // Hier sollten die Includes der eigenen Thread-Headerfiles ergaenzt werden
 #include "user/userthread.h"
 #include "user/counterthread.h"
+#include "user/buttonthread.h"
+#include "syscall/guarded_semaphore.h"
+
+Guarded_Semaphore inform(0);
 
 /* Threads beim Scheduler anmelden */
 static void ready_threads() {
   organizer.Organizer::ready(userthread);
+  organizer.Organizer::ready(buttonthread);
   organizer.Organizer::ready(counterthread);
 }
 

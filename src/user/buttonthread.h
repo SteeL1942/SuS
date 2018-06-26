@@ -3,6 +3,7 @@
 
 #include "syscall/thread.h"
 #include "syscall/guarded_buzzer.h"
+#include "syscall/guarded_semaphore.h"
 
 class ButtonThread: public Thread {
 private:
@@ -24,9 +25,6 @@ public:
 };
 
 extern ButtonThread buttonthread;
-
+extern Guarded_Semaphore inform;
 
 #endif /* USER_BUTTONTHREAD_H_ */
-
-
-

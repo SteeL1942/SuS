@@ -1,5 +1,5 @@
-#ifndef USER_BUTTONTHREAD_H_
-#define USER_BUTTONTHREAD_H_
+#ifndef USER_COUNTERTHREAD_H_
+#define USER_COUNTERTHREAD_H_
 
 #include "syscall/thread.h"
 #include "syscall/guarded_buzzer.h"
@@ -27,8 +27,9 @@ public:
 };
 
 extern CounterThread counterthread;
+extern Guarded_Semaphore inform;
 
-#endif /* USER_BUTTONTHREAD_H_ */
+#endif /* USER_COUNTERTHREAD_H_ */
 
 
 
